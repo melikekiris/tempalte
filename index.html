@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre Équestre Les Crins d'Or</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="/" class="active">Accueil</a></li>
+            <li><a href="/cours-stages">Cours & Stages</a></li>
+            <li><a href="/pension">Pension</a></li>
+            <li><a href="/installations">Installations</a></li>
+            <li><a href="/actualites">Actualités</a></li>
+        </ul>
+
+        <div class="logo">
+                  <a href="../vue/index.html">
+                <img src="../photos/equip.png" alt="Equihorizon">
+            </a>
+        </div>
+       
+       
+
+        <div class="right-elements">
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Rechercher...">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <a href="/connexion" class="login-button">
+                <i class="fas fa-user"></i> Se connecter
+            </a>
+        </div>
+    </nav>
+
+    <header id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue aux Crins d'Or</h1>
+            <p>Centre équestre de prestige pour tous les passionnés</p>
+            <a href="#contact" class="cta-button">Réserver un cours</a>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>À propos de nous</h2>
+            <p>Les Crins d'Or est un centre équestre de renommée, offrant des services de qualité depuis plus de 30 ans. Notre passion pour les chevaux et notre engagement envers nos clients nous distinguent.</p>
+            <div class="about-features">
+                <div class="feature">
+                    <i class="fas fa-medal"></i>
+                    <h3>30 ans d'expérience</h3>
+                    <p>Une expertise reconnue dans l'équitation</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <h3>Instructeurs certifiés</h3>
+                    <p>Une équipe professionnelle à votre service</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-horse"></i>
+                    <h3>Chevaux de qualité</h3>
+                    <p>Des montures adaptées à tous les niveaux</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Nos Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-horse"></i>
+                <h3>Cours d'équitation</h3>
+                <p>Cours particuliers et collectifs pour tous niveaux</p>
+                <ul class="service-details">
+                    <li>Débutants à confirmés</li>
+                    <li>Cours enfants et adultes</li>
+                    <li>Stages vacances</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-medal"></i>
+                <h3>Compétition</h3>
+                <p>Préparation aux compétitions et coaching</p>
+                <ul class="service-details">
+                    <li>Entraînement personnalisé</li>
+                    <li>Coaching en concours</li>
+                    <li>Préparation mentale</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-home"></i>
+                <h3>Pension</h3>
+                <p>Pension complète pour votre cheval</p>
+                <ul class="service-details">
+                    <li>Box spacieux</li>
+                    <li>Sorties quotidiennes</li>
+                    <li>Soins personnalisés</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="installations" class="installations">
+        <h2>Nos Installations</h2>
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="../photos/rider.jpg" alt="Manège couvert">
+                <div class="carousel-caption">
+                    <h3>Manège couvert olympique</h3>
+                    <p>Surface de 60x20m avec sol fibré</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../photos/cap.jpg" alt="Carrière extérieure">
+                <div class="carousel-caption">
+                    <h3>Carrière extérieure</h3>
+                    <p>Surface de 80x40m en sable de Fontainebleau</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="tarifs" class="pricing">
+        <h2>Nos Tarifs</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Découverte</h3>
+                <div class="price">30€</div>
+                <p>Par séance</p>
+                <ul>
+                    <li>1 cours collectif</li>
+                    <li>Matériel fourni</li>
+                    <li>Tous niveaux</li>
+                </ul>
+                <a href="#contact" class="pricing-button">Réserver</a>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Forfait Mensuel</h3>
+                <div class="price">99€</div>
+                <p>Par mois</p>
+                <ul>
+                    <li>4 cours collectifs</li>
+                    <li>Accès aux installations</li>
+                    <li>Matériel fourni</li>
+                </ul>
+                <a href="#contact" class="pricing-button">Réserver</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Pension</h3>
+                <div class="price">450€</div>
+                <p>Par mois</p>
+                <ul>
+                    <li>Box standard</li>
+                    <li>2 sorties/jour</li>
+                    <li>Alimentation incluse</li>
+                </ul>
+                <a href="#contact" class="pricing-button">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="Email" required>
+                <select required>
+                    <option value="">Choisir un service</option>
+                    <option value="cours">Cours d'équitation</option>
+                    <option value="pension">Pension</option>
+                    <option value="competition">Compétition</option>
+                </select>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <div class="contact-info">
+                <h3>Informations</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue des Écuries, 75000 Paris</p>
+                <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@crinsdor.fr</p>
+                <div class="opening-hours">
+                    <h4>Horaires d'ouverture</h4>
+                    <p>Lundi - Samedi : 8h - 20h</p>
+                    <p>Dimanche : 9h - 18h</p>
+                </div>
+                <div class="map">
+                    <!-- Intégrez ici votre carte Google Maps -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937586!2d2.2922926156744775!3d48.858370079287466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1647874587201!5m2!1sfr!2sfr" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Les Crins d'Or</h4>
+                <p>Centre équestre de qualité depuis 1990</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#installations">Installations</a></li>
+                    <li><a href="#tarifs">Tarifs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Les Crins d'Or - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
