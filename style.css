@@ -183,16 +183,43 @@ h1, h2, h3, h4 {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('../photos/cap.jpg') center/cover;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../photos/cap.jpg');
+    background-position: center;
+    background-size: cover;
+    animation: slideShow 10s infinite;
+    z-index: -1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 1;
     max-width: 800px;
     padding: 2rem;
 }
@@ -225,6 +252,30 @@ h1, h2, h3, h4 {
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+}
+
+/* Animation pour le diaporama */
+@keyframes slideShow {
+    0%, 20% {
+        background-image: url('../photos/cap.jpg');
+        opacity: 1;
+    }
+    25%, 45% {
+        background-image: url('../photos/rider.jpg');
+        opacity: 1;
+    }
+    50%, 70% {
+        background-image: url('../photos/cap.jpg');
+        opacity: 1;
+    }
+    75%, 95% {
+        background-image: url('../photos/rider.jpg');
+        opacity: 1;
+    }
+    100% {
+        background-image: url('../photos/cap.jpg');
+        opacity: 1;
+    }
 }
 
 /* About Section */
@@ -835,4 +886,24 @@ footer {
     margin-bottom: 1rem;
     text-align: center;
 }
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--gradient);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 999;
+}
 
+.back-to-top.visible {
+    opacity: 1;
+}
