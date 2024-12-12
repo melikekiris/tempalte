@@ -23,6 +23,14 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 h1, h2, h3, h4 {
@@ -309,23 +317,23 @@ h1, h2, h3, h4 {
 /* Animation pour le diaporama */
 @keyframes slideShow {
     0%, 20% {
-        background-image: url('../photos/ele.jpg');
-        opacity: 1;
-    }
-    25%, 45% {
         background-image: url('../photos/ala.jpg');
         opacity: 1;
     }
-    50%, 70% {
-        background-image: url('../photos/cap.jpg');
-        opacity: 1;
-    }
-    75%, 95% {
+    25%, 45% {
         background-image: url('../photos/rider.jpg');
         opacity: 1;
     }
-    100% {
+    50%, 70% {
         background-image: url('../photos/ele.jpg');
+        opacity: 1;
+    }
+    75%, 95% {
+        background-image: url('../photos/cap.jpg');
+        opacity: 1;
+    }
+    100% {
+        background-image: url('../photos/ala.jpg');
         opacity: 1;
     }
 }
@@ -668,33 +676,51 @@ footer {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Media Queries pour les tablettes */
+@media (max-width: 1024px) {
     .navbar {
         padding: 1rem;
     }
 
     .nav-links {
-        display: none;
+        display: none; /* Cacher les liens de navigation */
     }
 
     .burger {
-        display: block;
+        display: block; /* Afficher l'icône du menu burger */
     }
 
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .services-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr; /* Une seule colonne */
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr; /* Une seule colonne */
+    }
+}
+
+/* Media Queries pour les téléphones */
+@media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
 
-    .pricing-card.featured {
-        transform: none;
+    .services-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr; /* Une seule colonne */
     }
 
     .contact-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Une seule colonne */
     }
 }
 
+/* Media Queries pour les petits téléphones */
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 2rem;
@@ -702,7 +728,11 @@ footer {
 
     .services-grid,
     .pricing-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Une seule colonne */
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr; /* Une seule colonne */
     }
 }
 
@@ -1068,17 +1098,4 @@ footer {
     border-radius: 5px;
     margin-bottom: 1rem;
     text-align: center;
-}
-
-.news-card, .discipline-card {
-    background: linear-gradient(135deg, #ffffff, #f0f0f0);
-    border: none;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 10px;
-    text-align: left;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
-    position: relative;
-    overflow: hidden;
 }
